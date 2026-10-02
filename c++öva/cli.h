@@ -1,21 +1,23 @@
 #pragma once
-#include <cstdlib>
 
-void setup()
+#ifdef _WIN32
+#include <cstdlib>
+#endif
+
+inline void setup()
 {
 #ifdef _WIN32
     system("chcp 65001 > nul");
 #endif
 }
 
-
-void clean()
+inline void clean()
 {
-#ifdef _WIN64
+#ifdef _WIN32
     system("cls");
-#endif 
-#ifdef defined(__linux__) || defined(__APPLE__)
-    system("clear");
-#endif 
+#endif
 
+#if defined(__linux__) || defined(__APPLE__)
+    system("clear");
+#endif
 }
