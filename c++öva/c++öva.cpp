@@ -17,7 +17,7 @@ int main()
     while (true)
     {
         std::cout << "\n=== MENY ===\n";
-        std::cout << "1. Hälsa\n";
+        std::cout << "1. vad heter du \n";
         std::cout << "2. Visa ålder\n";
         std::cout << "3. Avsluta\n";
 
