@@ -13,7 +13,6 @@ int age{};
 int main()
 {
     setup();
-
     while (true)
     {
         std::cout << "\n=== MENY ===\n";
