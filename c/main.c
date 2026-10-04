@@ -74,7 +74,10 @@ Läs och skriv data till en fil.
 Skapa ett enkelt textbaserat spel.
 */
 #include <stdio.h>
+void test() {
 
+
+}
 int main()
 {
     printf("Hello World\n");
