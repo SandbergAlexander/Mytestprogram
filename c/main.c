@@ -74,12 +74,42 @@ Läs och skriv data till en fil.
 Skapa ett enkelt textbaserat spel.
 */
 #include <stdio.h>
-void test() {
+void skiva() {
 
+    FILE* fil = fopen("data.bin", "wb");
 
+    if (fil == NULL) {
+        printf("Kunde inte öppna filen.\n");
+        return 1;
+    }
+
+    int tal = 12345;
+
+    fwrite(&tal, sizeof(int), 1, fil);
+
+    fclose(fil);
+}
+void öpnna() {
+    int tal;
+
+    FILE* fil = fopen("data.bin", "rb");
+
+    if (fil == NULL) {
+        printf("Kunde inte öppna filen.\n");
+        return 1;
+    }
+
+    fread(&tal, sizeof(int), 1, fil);
+
+    printf("Talet är: %d\n", tal);
+
+    fclose(fil);
+ 
 }
 int main()
 {
+ 
+
     printf("Hello World\n");
     printf("Räkna ut arean av en cirkel.\n");
     printf("Det gör vi genom pi * 5 * 5\n");
